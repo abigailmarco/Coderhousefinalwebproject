@@ -3,7 +3,7 @@
 
 Proyecto final del curso: un sitio web estático de 5 páginas para Impact Logic, una empresa que diseña productos para prevenir lesiones y golpes de calor en deportistas. Elegí este tema porque conozco el proyecto de cerca y me pareció un buen desafío armar un sitio real, con contenido de verdad, en lugar de uno de prueba.
 
-**Sitio online:** PEGAR-ACÁ-EL-LINK-DE-NETLIFY
+**Sitio online:** (https://6adfa4aaa4ab4e7a67a4dea3--sparkly-selkie-ea34ae.netlify.app/pages/cryo-chair)
 
 ## Qué hay en el sitio
 
