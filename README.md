@@ -1,4 +1,4 @@
-[README.md](https://github.com/user-attachments/files/33980837/README.md)
+(https://sparkly-selkie-ea34ae.netlify.app)
 # Impact Logic™
 
 Proyecto final del curso: un sitio web estático de 5 páginas para Impact Logic, una empresa que diseña productos para prevenir lesiones y golpes de calor en deportistas. Elegí este tema porque conozco el proyecto de cerca y me pareció un buen desafío armar un sitio real, con contenido de verdad, en lugar de uno de prueba.
