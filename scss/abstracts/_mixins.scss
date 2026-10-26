@@ -1,0 +1,68 @@
+// ==========================================================
+// MIXINS — reusable blocks with parameters
+// ==========================================================
+@use "variables" as *;
+
+// Media query helper: @include respond(tablet) / respond(desktop)
+@mixin respond($bp) {
+  @if $bp == tablet {
+    @media (min-width: $bp-tablet) {
+      @content;
+    }
+  } @else if $bp == desktop {
+    @media (min-width: $bp-desktop) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $bp) {
+      @content;
+    }
+  }
+}
+
+// Flexbox helper
+@mixin flex($direction: row, $justify: flex-start, $align: stretch, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+// Responsive grid: 1 column on mobile, $cols columns from $bp up
+@mixin grid-cols($cols, $gap: 32px, $bp: tablet) {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $gap;
+
+  @include respond($bp) {
+    grid-template-columns: repeat($cols, 1fr);
+  }
+}
+
+// Soft shadow with adjustable depth
+@mixin shadow($y: 8px, $blur: 24px, $alpha: 0.08) {
+  box-shadow: 0 $y $blur rgba($navy, $alpha);
+}
+
+// Fluid heading: smaller on mobile, full size on desktop
+@mixin heading($size-mobile, $size-desktop, $weight: $fw-semibold) {
+  font-size: $size-mobile;
+  font-weight: $weight;
+  line-height: 1.2;
+
+  @include respond(desktop) {
+    font-size: $size-desktop;
+  }
+}
+
+// Hover lift used by buttons and cards
+@mixin lift($distance: -4px) {
+  transition:
+    transform $speed $ease,
+    box-shadow $speed $ease;
+
+  &:hover {
+    transform: translateY($distance);
+  }
+}

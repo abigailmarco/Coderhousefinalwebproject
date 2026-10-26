@@ -1,0 +1,110 @@
+// ==========================================================
+// CARDS — pillars, product cards and research studies
+// ==========================================================
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders";
+
+// Pillars ("Why choose us")
+.pillars {
+  @include grid-cols(3, 24px, tablet);
+  text-align: center;
+}
+
+.pillar {
+  @extend %panel;
+  padding: 32px 24px;
+  @include lift(-6px);
+
+  &:hover {
+    @include shadow(14px, 30px, 0.12);
+  }
+
+  h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+    color: $navy;
+  }
+
+  p {
+    @extend %muted-text;
+    margin: 0;
+  }
+}
+
+// NekProTek version cards
+.product-cards {
+  @include grid-cols(2, 32px, tablet);
+}
+
+.product-card {
+  @extend %panel;
+  border: 1px solid $border;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  @include lift(-6px);
+
+  img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  &__body {
+    padding: 24px;
+
+    @include respond(desktop) {
+      padding: 26px 28px;
+    }
+  }
+
+  h2 {
+    font-size: 22px;
+    margin-bottom: 6px;
+
+    @include respond(desktop) {
+      font-size: 24px;
+    }
+  }
+
+  h3 {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $accent;
+    margin: 16px 0 8px;
+  }
+
+  p {
+    @extend %muted-text;
+  }
+}
+
+// Research studies
+.study {
+  @extend %panel;
+  border-left: 4px solid $accent;
+  border-radius: 8px;
+  padding: 20px 22px;
+  margin-bottom: 20px;
+
+  h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+    color: $navy;
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+
+      &:hover {
+        color: $accent;
+      }
+    }
+  }
+
+  p {
+    @extend %muted-text;
+    margin: 0;
+  }
+}

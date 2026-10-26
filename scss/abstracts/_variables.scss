@@ -1,0 +1,39 @@
+// ==========================================================
+// VARIABLES — colors, fonts, spacing and breakpoints
+// ==========================================================
+
+// Colors
+$navy: #0d1a33;
+$ink: #0d1a33;
+$muted: #45526b;
+$text-light: #d7dde8;
+$white: #ffffff;
+$pale: #f4f6fb;
+$accent: #3f6ac2;
+$accent-hover: #4d79d1;
+$danger: #ff6b6b;
+$border: rgba(13, 26, 51, 0.1);
+
+// Typography
+$font-main: "Montserrat", sans-serif;
+$fs-base: 17px;
+$fs-small: 14px;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+// Spacing & shape
+$container-max: 1140px;
+$section-pad: 64px;
+$section-pad-mobile: 44px;
+$radius-sm: 6px;
+$radius: 10px;
+$radius-lg: 12px;
+
+// Breakpoints (mobile first)
+$bp-tablet: 768px;
+$bp-desktop: 992px;
+
+// Motion
+$ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+$speed: 0.25s;

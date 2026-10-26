@@ -1,0 +1,49 @@
+// ==========================================================
+// NATIVE ANIMATIONS — @keyframes (the library animation is AOS)
+// ==========================================================
+@use "../abstracts/variables" as *;
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoom-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.anim-fade-up {
+  animation: fade-up 0.8s $ease both;
+
+  &.delay-1 {
+    animation-delay: 0.15s;
+  }
+  &.delay-2 {
+    animation-delay: 0.3s;
+  }
+}
+
+.anim-zoom-in {
+  animation: zoom-in 0.9s $ease 0.2s both;
+}
+
+// Respect users who prefer less motion
+@media (prefers-reduced-motion: reduce) {
+  .anim-fade-up,
+  .anim-zoom-in {
+    animation: none;
+  }
+}

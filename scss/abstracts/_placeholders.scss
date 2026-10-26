@@ -1,0 +1,25 @@
+// ==========================================================
+// PLACEHOLDERS — shared styles applied with @extend
+// ==========================================================
+@use "variables" as *;
+@use "mixins" as *;
+
+// White panel used by pillars, product cards and studies
+%panel {
+  background: $white;
+  border-radius: $radius;
+  @include shadow(6px, 18px, 0.06);
+}
+
+// Muted body copy
+%muted-text {
+  color: $muted;
+  font-size: 16px;
+}
+
+// Reset for lists without bullets
+%list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,65 @@
+// ==========================================================
+// FORMS — contact form in the footer
+// ==========================================================
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.contact-form {
+  h3 {
+    font-size: 22px;
+    margin-bottom: 18px;
+  }
+
+  .form-row-2 {
+    @include grid-cols(2, 14px, tablet);
+  }
+
+  .field {
+    margin-bottom: 16px;
+
+    label,
+    legend {
+      display: block;
+      font-size: $fs-small;
+      font-weight: $fw-semibold;
+      margin-bottom: 6px;
+    }
+
+    fieldset {
+      border: 0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .req {
+      color: $danger;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid rgba($white, 0.25);
+      border-radius: $radius-sm;
+      background: rgba($white, 0.06);
+      color: $white;
+      font-size: 16px;
+      font-family: inherit;
+      transition:
+        border-color $speed $ease,
+        background $speed $ease;
+
+      &:focus {
+        outline: none;
+        border-color: $accent-hover;
+        background: rgba($white, 0.12);
+      }
+    }
+  }
+
+  .sub {
+    font-size: 12px;
+    color: rgba($white, 0.55);
+    margin-top: 4px;
+  }
+}

@@ -1,0 +1,29 @@
+// ==========================================================
+// PRODUCT PAGES — sports tags
+// ==========================================================
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders";
+
+.sport-tags {
+  @extend %list-reset;
+  @include flex(row, flex-start, center, 10px);
+  flex-wrap: wrap;
+
+  li {
+    background: $pale;
+    color: $navy;
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-size: 15px;
+    font-weight: $fw-medium;
+    transition:
+      background $speed $ease,
+      color $speed $ease;
+
+    &:hover {
+      background: $navy;
+      color: $white;
+    }
+  }
+}

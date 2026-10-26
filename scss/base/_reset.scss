@@ -1,0 +1,32 @@
+// ==========================================================
+// RESET — base rules on top of Bootstrap's Reboot
+// ==========================================================
+@use "../abstracts/variables" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden; // safety net: never allow horizontal scroll
+}
+
+body {
+  margin: 0;
+  background: $white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: $container-max;
+  padding-left: 20px;
+  padding-right: 20px;
+}

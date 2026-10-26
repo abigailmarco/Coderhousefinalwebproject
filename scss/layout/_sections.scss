@@ -1,0 +1,119 @@
+// ==========================================================
+// SECTIONS — page header band, section spacing, feature rows
+// ==========================================================
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders";
+
+.section {
+  padding: $section-pad-mobile 0;
+
+  @include respond(desktop) {
+    padding: $section-pad 0;
+  }
+
+  &--alt {
+    background: $pale;
+  }
+
+  &--center {
+    text-align: center;
+
+    .lead {
+      margin: 0 auto 40px;
+    }
+  }
+
+  &__title {
+    @include heading(30px, 40px);
+    margin-bottom: 16px;
+  }
+}
+
+// Navy band at the top of inner pages
+.page-head {
+  background: $navy;
+  color: $white;
+  padding: 44px 0;
+
+  @include respond(desktop) {
+    padding: 56px 0;
+  }
+
+  h1 {
+    @include heading(32px, 46px);
+    margin: 0;
+  }
+
+  p {
+    color: $text-light;
+    margin: 12px 0 0;
+    max-width: 900px;
+  }
+}
+
+// Image + text row
+.feature {
+  @include grid-cols(2, 32px, desktop);
+  align-items: center;
+
+  @include respond(desktop) {
+    gap: 48px;
+  }
+
+  img {
+    width: 100%;
+    border-radius: $radius;
+    object-fit: cover;
+    max-height: 360px;
+    @include shadow;
+
+    @include respond(desktop) {
+      max-height: 440px;
+    }
+  }
+
+  h2,
+  .h2 {
+    @include heading(26px, 32px);
+    margin-bottom: 14px;
+  }
+
+  p {
+    color: $muted;
+  }
+
+  // Image on the right on desktop
+  &--reverse {
+    @include respond(desktop) {
+      > :first-child {
+        order: 2;
+      }
+    }
+  }
+}
+
+// Narrow text block
+.block {
+  max-width: 900px;
+
+  h2 {
+    @include heading(26px, 30px);
+    margin-bottom: 14px;
+  }
+
+  h3 {
+    font-size: 20px;
+    color: $navy;
+    margin: 22px 0 10px;
+  }
+
+  p {
+    color: $muted;
+    margin-bottom: 16px;
+  }
+
+  &--centered {
+    margin: 0 auto;
+  }
+}

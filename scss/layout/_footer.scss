@@ -1,0 +1,46 @@
+// ==========================================================
+// FOOTER
+// ==========================================================
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.site-footer {
+  background: $navy;
+  color: $white;
+  padding: 48px 0 0;
+
+  @include respond(desktop) {
+    padding: 64px 0 0;
+  }
+
+  &__grid {
+    @include grid-cols(2, 40px, tablet);
+    align-items: start;
+
+    @include respond(desktop) {
+      gap: 56px;
+    }
+  }
+
+  &__brand h2 {
+    @include heading(26px, 30px);
+    margin-bottom: 24px;
+  }
+
+  &__copy {
+    border-top: 1px solid rgba($white, 0.12);
+    margin-top: 48px;
+    padding: 24px 0;
+    font-size: $fs-small;
+    color: rgba($white, 0.7);
+    text-align: center;
+
+    @include respond(tablet) {
+      text-align: right;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}

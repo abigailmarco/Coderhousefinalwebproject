@@ -1,0 +1,57 @@
+// ==========================================================
+// TYPOGRAPHY
+// ==========================================================
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+body {
+  font-family: $font-main;
+  font-size: $fs-base;
+  line-height: 1.6;
+  color: $ink;
+
+  @include respond(desktop) {
+    font-size: 18px;
+  }
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  color: inherit;
+}
+
+a {
+  color: $accent;
+  transition: color $speed $ease;
+
+  &:hover {
+    color: $accent-hover;
+  }
+}
+
+.lead {
+  font-size: 18px;
+  font-weight: 400;
+  color: $muted;
+  max-width: 820px;
+
+  @include respond(desktop) {
+    font-size: 19px;
+  }
+}
+
+.tagline {
+  max-width: 900px;
+  margin: 48px auto 0;
+  font-weight: $fw-bold;
+  font-size: 18px;
+  line-height: 1.4;
+  color: $navy;
+  text-transform: uppercase;
+
+  @include respond(tablet) {
+    font-size: 22px;
+  }
+}
